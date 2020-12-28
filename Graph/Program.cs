@@ -5,23 +5,24 @@ namespace Graph {
     class Program {
         static void Main(string[] args) {
             Graph myGraph = new Graph();
-            Vertex vertex1 = new Vertex("A");
-            Vertex vertex2 = new Vertex("B");
-            Vertex vertex3 = new Vertex("C");
-            Vertex vertex4 = new Vertex("D");
+            
+            // Add Vertices
+            myGraph.AddVertex("Muqdisho");
+            myGraph.AddVertex("Kismaayo");
+            myGraph.AddVertex("Beledweyne");
+            myGraph.AddVertex("Laascaanood");
+            myGraph.AddVertex("Marka");
+            myGraph.AddVertex("Afgooye");
 
-            vertex1.AddEdge(1);
-            vertex1.AddEdge(3);
+            // Add Edges
+            myGraph.AddEdge("Muqdisho", "Kismaayo");
+            myGraph.AddEdge("Muqdisho", "Beledweyne");
+            myGraph.AddEdge("Kismaayo", "Marka");
+            myGraph.AddEdge("Beledweyne", "Marka");
+            myGraph.AddEdge("Marka", "Afgooye");
+            myGraph.AddEdge("Afgooye", "Muqdisho");
+            myGraph.AddEdge("Afgooye", "Marka");
 
-            vertex2.AddEdge(2);
-
-            vertex3.AddEdge(0);
-            vertex3.AddEdge(3);
-
-            myGraph.InsertVertex(vertex1);
-            myGraph.InsertVertex(vertex2);
-            myGraph.InsertVertex(vertex3);
-            myGraph.InsertVertex(vertex4);
             myGraph.DisplayVertices();
         }
     }

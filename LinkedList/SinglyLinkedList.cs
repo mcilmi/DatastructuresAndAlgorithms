@@ -2,7 +2,7 @@
 
 namespace LinkedList {
     public class SinglyLinkedList {
-        private Node head;
+        public Node head;
 
         public SinglyLinkedList() {
 
