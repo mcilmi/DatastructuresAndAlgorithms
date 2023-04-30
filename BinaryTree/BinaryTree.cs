@@ -45,7 +45,7 @@ internal class BinaryTree
     {
         if (root == null) return;
 
-        Queue<Node> nodes = new Queue<Node>();
+        Queue<Node> nodes = new();
         nodes.Enqueue(root);
         
         while(nodes.Count() > 0)
